@@ -1,0 +1,25 @@
+MainInterface:
+    orientation: "vertical"
+    padding: [dp(20),dp(20),dp(20),dp(20)]
+    spacing: dp(20)
+
+    Label:
+        text: "Sentiment Analyzer"
+        size_hint_y: None
+        height: dp(50)
+
+    TextInput:
+        id: input
+        size_hint: 1,0.6
+    BoxLayout:
+        size_hint: 1,0.1
+        Button:
+            text: "Analyze"
+            on_press: root.analyze()
+        Button:
+            text: "Clear"
+            on_press: root.clear()
+    Label:
+        id: label
+        size_hint: 1,0.3
+        text: "Result"
